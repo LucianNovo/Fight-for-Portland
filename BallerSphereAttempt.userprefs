@@ -1,0 +1,21 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/scr_ballersphere.js">
+    <Files>
+      <File FileName="Assets/Standard Assets/Character Controllers/Sources/Scripts/FPSInputController.js" Line="32" Column="4" />
+      <File FileName="Assets/Scripts/scr_asteroid.js" Line="23" Column="4" />
+      <File FileName="Assets/Scripts/scr_scene_game_over.js" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/scr_explosion.js" Line="14" Column="2" />
+      <File FileName="Assets/Scripts/scr_gun.js" Line="3" Column="28" />
+      <File FileName="Assets/Scripts/scr_launcher.js" Line="18" Column="12" />
+      <File FileName="Assets/Scripts/scr_bullet.js" Line="17" Column="2" />
+      <File FileName="Assets/Scripts/health_bar.js" Line="5" Column="27" />
+      <File FileName="Assets/Scripts/scr_ballersphere.js" Line="15" Column="40" />
+      <File FileName="Assets/Scripts/scr_scene_manager.js" Line="22" Column="28" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

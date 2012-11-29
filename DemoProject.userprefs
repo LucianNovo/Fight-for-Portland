@@ -1,0 +1,19 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\scr_scene_start.js">
+    <Files>
+      <File FileName="Assets\Scripts\scr_gun.js" Line="18" Column="57" />
+      <File FileName="Assets\Scripts\scr_launcher.js" Line="4" Column="40" />
+      <File FileName="Assets\Scripts\scr_bullet.js" Line="5" Column="40" />
+      <File FileName="Assets\Scripts\scr_asteroid.js" Line="24" Column="2" />
+      <File FileName="Assets\Scripts\scr_explosion.js" Line="13" Column="23" />
+      <File FileName="Assets\Scripts\scr_scene_manager.js" Line="33" Column="53" />
+      <File FileName="Assets\Scripts\scr_scene_game_over.js" Line="22" Column="2" />
+      <File FileName="Assets\Scripts\scr_scene_start.js" Line="17" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/scr_ballersphere.js">
+    <Files>
+      <File FileName="Assets/Standard Assets/Character Controllers/Sources/Scripts/CharacterMotor.js" Line="292" Column="15" />
+      <File FileName="Assets/Scripts/movement.js" Line="6" Column="20" />
+      <File FileName="Assets/Scripts/scr_ballersphere.js" Line="14" Column="2" />
+      <File FileName="Assets/Scripts/collisionDectector.js" Line="11" Column="1" />
+      <File FileName="Assets/Scripts/scr_gun.js" Line="29" Column="1" />
+      <File FileName="Assets/Scripts/scr_launcher.js" Line="13" Column="25" />
+      <File FileName="Assets/Scripts/health_bar.js" Line="29" Column="35" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
