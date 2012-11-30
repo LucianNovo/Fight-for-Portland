@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Models\Cartoon SMG\Spin Dat.js" />
+     <Compile Include="Assets\Scripts\NetworkManager.js" />
      <Compile Include="Assets\Scripts\collisionDectector.js" />
      <Compile Include="Assets\Scripts\health_bar.js" />
      <Compile Include="Assets\Scripts\movement.js" />
