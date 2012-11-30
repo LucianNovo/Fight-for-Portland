@@ -58,6 +58,7 @@ function spawnPlayer(){
 
 //spawns the player who connects by refreshing the host, then pressing the button with the gameName in it.  
 function OnConnectedToServer(){//immediately called when the server is connected 
+	Destroy(GameObject.Find("Main Camera").camera);
 	Debug.Log("The player should spawn."); 
 	spawnPlayer();
 }
@@ -74,7 +75,7 @@ function OnMasterServerEvent(mse:MasterServerEvent){
 		}
 }
 
-//Connects the player who initializes the server
+//Connects the player who initialized the server
 function OnServerInitialized(){
 	Debug.Log("Server is initialized");
 	spawnPlayer();

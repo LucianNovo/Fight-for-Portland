@@ -23,20 +23,20 @@ function OnGUI()
 
 function Update()
 {
-    // for this example, the bar display is linked to the current time,
-    // however you would set this value based on your desired display
-    // eg, the loading progress, the player's health, or whatever.
-//    playerHealth *= .05;
-//    barDisplay = playerHealth;
-    //barDisplay = playersHealth.   
+	if(barDisplay<0){
+		Destroy(gameObject);
+		Debug.Log("OUT of HEALTH : You're dead.");			
+	}
 }
 
 function OnTriggerEnter(other:Collider){
 	if(other.gameObject.tag == "bullet")
 	{
-		barDisplay -= 10;
+		barDisplay = barDisplay - .1;
 		Debug.Log("HIT!!! : Collider Detected");
 		Destroy(other.gameObject);
-		Destroy(gameObject); 
+		if(barDisplay < 0){
+			Destroy(gameObject); 
+		}
 	}
 }
