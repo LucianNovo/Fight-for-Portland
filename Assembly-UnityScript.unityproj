@@ -45,20 +45,27 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Models\Cartoon SMG\Spin Dat.js" />
+     <Compile Include="Assets\Scripts\BallerSphere_scr\health_bar.js" />
+     <Compile Include="Assets\Scripts\BallerSphere_scr\scr_ballersphere.js" />
+     <Compile Include="Assets\Scripts\BallerSphere_scr\scr_bullet.js" />
+     <Compile Include="Assets\Scripts\BallerSphere_scr\scr_gun.js" />
+     <Compile Include="Assets\Scripts\BallerSphere_scr\scr_launcher.js" />
      <Compile Include="Assets\Scripts\NetworkManager.js" />
+     <Compile Include="Assets\Scripts\cameraOrbit.js" />
      <Compile Include="Assets\Scripts\collisionDectector.js" />
-     <Compile Include="Assets\Scripts\health_bar.js" />
+     <Compile Include="Assets\Scripts\jet_spawn.js" />
+     <Compile Include="Assets\Scripts\level_mgmrs\intro_scr.js" />
+     <Compile Include="Assets\Scripts\level_mgmrs\scr_scene_game_over.js" />
+     <Compile Include="Assets\Scripts\level_mgmrs\scr_scene_manager.js" />
+     <Compile Include="Assets\Scripts\level_mgmrs\scr_scene_start.js" />
+     <Compile Include="Assets\Scripts\menuGUI.js" />
+     <Compile Include="Assets\Scripts\move_forward.js" />
      <Compile Include="Assets\Scripts\movement.js" />
      <Compile Include="Assets\Scripts\normalizePlayer.js" />
      <Compile Include="Assets\Scripts\scr_asteroid.js" />
-     <Compile Include="Assets\Scripts\scr_ballersphere.js" />
-     <Compile Include="Assets\Scripts\scr_bullet.js" />
      <Compile Include="Assets\Scripts\scr_explosion.js" />
-     <Compile Include="Assets\Scripts\scr_gun.js" />
-     <Compile Include="Assets\Scripts\scr_launcher.js" />
-     <Compile Include="Assets\Scripts\scr_scene_game_over.js" />
-     <Compile Include="Assets\Scripts\scr_scene_manager.js" />
-     <Compile Include="Assets\Scripts\scr_scene_start.js" />
+     <Compile Include="Assets\Scripts\testfunk\bullet_stream.js" />
+     <None Include="Assets\Models\F4E-Phantom\readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

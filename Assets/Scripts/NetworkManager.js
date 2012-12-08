@@ -8,6 +8,13 @@ var hostData: HostData[];
 var spawnObject: Transform;
 var playerPrefab: GameObject;
 
+var playerCount: int = 0;
+
+var beep : AudioClip;
+var menuSkin : GUISkin;
+var areaWidth : float;
+var areaHeight : float;
+
 /*
 Interface for the buttons, I've declared the variables here but assigned them in (the unity) application. That makes it easier
 to see the actual location of the buttons. 
@@ -18,7 +25,7 @@ function OnGUI(){
 			Debug.Log("server started");
 			startserver();//initiates the server
 		}
-	
+		
 		if(GUI.Button(Rect(btnX,btnY+20,btnW, btnY),"Refresh the Host")){
 			Debug.Log("refresh function called");
 			refreshHosts();//looks for the initialize game on the server, returns the option to connect if is. 
@@ -27,13 +34,17 @@ function OnGUI(){
 		if(hostData !=null){//if the host data isn't null(which is assigned when the user refreshes the host), shows the options 
 			for(var i:int =0;i<hostData.length;i++)
 			{
-				if(GUI.Button(Rect(btnX,btnY+40+(20*i),btnW,btnH),hostData[i].gameName))
+				if(GUI.Button(Rect(btnX,btnY+40+(20*i),btnW,btnH),"Play " + hostData[i].gameName))
 					{
 						Network.Connect(hostData[i]);
 					}
 			}
 		}
-		
+		if(GUI.Button(Rect(btnX,btnY+60,btnW,btnH), "Intro")){
+			//OpenLevel("intro_scene");
+			//yield WaitForSeconds(0.35);
+			Application.LoadLevel("intro_scene");
+		}
 	}
 }
 
@@ -53,7 +64,11 @@ function Update(){
 }
 
 function spawnPlayer(){
-	Network.Instantiate(playerPrefab, spawnObject.position,Quaternion.identity,0);//creates the playerprefab at the location spcified.
+	var NewPlayer : GameObject = playerPrefab;
+	NewPlayer.name += Random.Range(int.MinValue, int.MaxValue).ToString();
+	Network.Instantiate(NewPlayer, spawnObject.position,Quaternion.identity,0);//creates the playerprefab at the location spcified.
+	playerCount++;
+	Debug.Log("Character: " + playerCount + " spawned");
 }
 
 //spawns the player who connects by refreshing the host, then pressing the button with the gameName in it.  
