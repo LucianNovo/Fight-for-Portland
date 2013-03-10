@@ -1,0 +1,24 @@
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [igdumdx32.dll 8.15.10.2202]
+    Renderer: Mobile Intel(R) 4 Series Express Chipset Family
+    Vendor:   Intel
+    VRAM:     64 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=1 DF24=0 INTZ=1 RAWZ=0 NULL=0 RESZ=1 SlowINTZ=0
+desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
+<I> Initializing (RawInput).
+<RI> Input initialized.
+Initialize engine version: 3.5.1f2
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Temp\DemoProject\shooter_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Temp\DemoProject\shooter_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Temp\DemoProject\shooter_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Temp\DemoProject\shooter_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.105 seconds
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 192. Operation took 5.226480 ms.
+Platform assembly: C:\Temp\DemoProject\shooter_Data\Managed\Boo.Lang.dll (this message is harmless)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 113. Operation took 8.725575 ms.
