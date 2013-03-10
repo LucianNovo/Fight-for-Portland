@@ -29,9 +29,10 @@ var powerBarDisplay : float = 1;
 var jumpSpeed: float= 100;
 var thrustSpeed: float = 50;
 var temp: float;
-var gravity: float = 20.0;
+var gravity: float = .0;
 private var jumpDirection : Vector3 = Vector3.zero;
 private var moveDirection : Vector3 = Vector3.forward;
+
 //moveDirection = Camera.main.transform.forward;
 var controller: CharacterController;
 var jump : int = 0;
@@ -45,45 +46,47 @@ function Start()
 	controller = GetComponent(CharacterController);
 }
 
+
+// All GUI elements temporarily disabled- so that the user can enjoy jumping and shooting without the occulsion of a gui.
 function OnGUI()
 {
-    // draw the background for the health bar;
-    GUI.BeginGroup (new Rect (healthBarPos.x, healthBarPos.y, healthBarSize.x, healthBarSize.y));
-        GUI.Box (Rect (0,0, healthBarSize.x, healthBarSize.y),healthBarEmpty);
-
-        // draw the filled-in part:
-   	 GUI.BeginGroup (new Rect (0, 0, healthBarSize.x * healthBarDisplay, healthBarSize.y));
-        
-        GUI.Box (Rect (0,0, healthBarSize.x, healthBarSize.y),healthBarFull);
-     GUI.EndGroup ();
-
-    GUI.EndGroup ();
-    
-    
-    // draw the background for the power bar;
-    GUI.BeginGroup (new Rect (powerBarPos.x, powerBarPos.y, powerBarSize.x, powerBarSize.y));
-        GUI.Box (Rect (0,0, powerBarSize.x, powerBarSize.y),powerBarEmpty);
-
-        // draw the filled-in part:
-   	 GUI.BeginGroup (new Rect (0, 0, powerBarSize.x * powerBarDisplay, powerBarSize.y));
-        
-        GUI.Box (Rect (0,0, powerBarSize.x, powerBarSize.y),powerBarFull);
-     GUI.EndGroup ();
-
-    GUI.EndGroup ();    
-
-      
-    // draw the background for the charge bar:
-    GUI.BeginGroup (new Rect (chargeBarPos.x, chargeBarPos.y, chargeBarSize.x, chargeBarSize.y));
-        GUI.Box (Rect (0,0, chargeBarSize.x, chargeBarSize.y),chargeBarEmpty);
-
-        // draw the filled-in part:
-   	 GUI.BeginGroup (new Rect (0, 0, chargeBarSize.x * chargeBarDisplay, chargeBarSize.y));
-        
-        GUI.Box (Rect (0,0, chargeBarSize.x, chargeBarSize.y),chargeBarFull);
-     GUI.EndGroup ();
-
-    GUI.EndGroup ();   
+//    // draw the background for the health bar;
+//    GUI.BeginGroup (new Rect (healthBarPos.x, healthBarPos.y, healthBarSize.x, healthBarSize.y));
+//        GUI.Box (Rect (0,0, healthBarSize.x, healthBarSize.y),healthBarEmpty);
+//
+//        // draw the filled-in part:
+//   	 GUI.BeginGroup (new Rect (0, 0, healthBarSize.x * healthBarDisplay, healthBarSize.y));
+//        
+//        GUI.Box (Rect (0,0, healthBarSize.x, healthBarSize.y),healthBarFull);
+//     GUI.EndGroup ();
+//
+//    GUI.EndGroup ();
+//    
+//    
+//    // draw the background for the power bar;
+//    GUI.BeginGroup (new Rect (powerBarPos.x, powerBarPos.y, powerBarSize.x, powerBarSize.y));
+//        GUI.Box (Rect (0,0, powerBarSize.x, powerBarSize.y),powerBarEmpty);
+//
+//        // draw the filled-in part:
+//   	 GUI.BeginGroup (new Rect (0, 0, powerBarSize.x * powerBarDisplay, powerBarSize.y));
+//        
+//        GUI.Box (Rect (0,0, powerBarSize.x, powerBarSize.y),powerBarFull);
+//     GUI.EndGroup ();
+//
+//    GUI.EndGroup ();    
+//
+//      
+//    // draw the background for the charge bar:
+//    GUI.BeginGroup (new Rect (chargeBarPos.x, chargeBarPos.y, chargeBarSize.x, chargeBarSize.y));
+//        GUI.Box (Rect (0,0, chargeBarSize.x, chargeBarSize.y),chargeBarEmpty);
+//
+//        // draw the filled-in part:
+//   	 GUI.BeginGroup (new Rect (0, 0, chargeBarSize.x * chargeBarDisplay, chargeBarSize.y));
+//        
+//        GUI.Box (Rect (0,0, chargeBarSize.x, chargeBarSize.y),chargeBarFull);
+//     GUI.EndGroup ();
+//
+//    GUI.EndGroup ();   
 } 
 
 function Update()
@@ -92,38 +95,37 @@ function Update()
 		Destroy(gameObject);
 		Debug.Log("OUT of HEALTH : You're dead. \n Because you got hit.");			
 	}
-	if (Input.GetKeyDown ("space") && (chargeBarDisplay < 1) && (powerBarDisplay > 0) && (powerBarDisplay > .05)){
-        print ("charging");
-        //increase the charge bar, decrease the power bar.
-        chargeBarDisplay += .05;
-        powerBarDisplay -= .05; 
-	}
-	//else increase the power bar.
-	else if(powerBarDisplay < 1){
-			powerBarDisplay += .0025;
-	} 
+
+	//gui momentarily disabled
+//	if (Input.GetKeyDown ("space") && (chargeBarDisplay < 1) && (powerBarDisplay > 0) && (powerBarDisplay > .05)){
+//        print ("charging");
+//        //increase the charge bar, decrease the power bar.
+//        chargeBarDisplay += .05;
+//        powerBarDisplay -= .05; 
+//	}
+//	//else increase the power bar.
+//	else if(powerBarDisplay < 1){
+//			powerBarDisplay += .0025;
+//	} 
 	
-	//jump upwards
-	if(Input.GetKeyDown("j")){
-		jumpDirection.y = jumpSpeed * chargeBarDisplay;
+	if(Input.GetKeyDown("space")){
+		jumpDirection.y = jumpSpeed;// * chargeBarDisplay;//temporarily desabled to make jumping enjoyable
+//		jumpDirection.y -= gravity * Time.deltaTime;
 		chargeBarDisplay = 0;
 	}
+			
+	//thrust temporarily disabled.
 //	if(Input.GetKeyDown("k")){
 //		temp = thrustSpeed;
 //		moveDirection.x = temp;
 //	}
 	
 //	temp -= .5 * Time.deltaTime;
-	jumpDirection.y -= gravity * Time.deltaTime;
 //	Debug.Log(moveDirection + " : Move Direction");
 //	Debug.Log(jumpDirection + " : Jump Direction");	
 	controller.Move(jumpDirection * Time.deltaTime);
-//	controller.Move(moveDirection * Time.deltaTime);
+	jumpDirection.y -= 2*gravity * Time.deltaTime;
 }
-
-//function diminishForwardForce(){
-//	
-//}
 
 function OnTriggerEnter(other:Collider)
 {
@@ -149,13 +151,13 @@ function OnTriggerEnter(other:Collider)
 //	curVect = Camera.main.transform.forward;
 //	Debug.Log(Camera.main.transform.left);
 //	
-//	if(Input.GetKeyDown("j")){
-//		Debug.Log("Jump " +jump + " triggered");
-//		//moveDirection = Camera.main.transform.zero;
-//		jumpDirection.y = jumpSpeed;
-//		jumpDirection.y -= gravity * Time.deltaTime;
-//		jump++;
-//	}
+//if(Input.GetKeyDown("j")){
+//	Debug.Log("Jump " +jump + " triggered");
+//	//moveDirection = Camera.main.transform.zero;
+//	jumpDirection.y = jumpSpeed;
+//	jumpDirection.y -= gravity * Time.deltaTime;
+//	jump++;
+//}
 ////	if(Input.GetKeyDown("y")){
 ////		Debug.Log("y");
 ////		moveDirection = Camera.main.transform.right;

@@ -1,20 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CS233GIslandWithBunnies/Assets/Scripts/MainMenuGUI2.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/level_mgmrs/intro_scr.js">
     <Files>
       <File FileName="../CS233GIslandWithBunnies/Assets/Scripts/MainMenuGUI2.js" Line="1" Column="1" />
-      <File FileName="Assets/Standard Assets/Character Controllers/Sources/Scripts/CharacterMotor.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/menuGUI.js" Line="2" Column="1" />
-      <File FileName="Assets/Scripts/movement.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/NetworkManager.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/move_forward.js" Line="9" Column="1" />
-      <File FileName="Assets/Scripts/jet_spawn.js" Line="2" Column="21" />
-      <File FileName="Assets/Scripts/cameraOrbit.js" Line="9" Column="71" />
-      <File FileName="Assets/bullet_stream.js" Line="10" Column="30" />
-      <File FileName="Assets/Scripts/BallerSphere_scr/scr_launcher.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BallerSphere_scr/scr_gun.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BallerSphere_scr/scr_bullet.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BallerSphere_scr/health_bar.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/menuGUI.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BallerSphere_scr/health_bar.js" Line="116" Column="4" />
+      <File FileName="Assets/Scripts/level_mgmrs/intro_scr.js" Line="26" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
